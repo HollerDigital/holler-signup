@@ -13,7 +13,11 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
+define('HOLLER_SIGNUP_URL', WP_PLUGIN_URL."/".dirname( plugin_basename( __FILE__ ) ) );
+define('HOLLER_SIGNUP_PATH', WP_PLUGIN_DIR."/".dirname( plugin_basename( __FILE__ ) ) );
+define("HOLLER_SIGNUP_VERSION", "2.1");
 
+// Plugin Updater
 require 'plugin-update-checker/plugin-update-checker.php';
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
 	'https://github.com/HollerDigital/holler-signup',
@@ -28,9 +32,7 @@ $myUpdateChecker->setBranch('stable-branch-name');
 $myUpdateChecker->setAuthentication('your-token-here');
 
 // Define Globals
-define('HOLLER_SIGNUP_URL', WP_PLUGIN_URL."/".dirname( plugin_basename( __FILE__ ) ) );
-define('HOLLER_SIGNUP_PATH', WP_PLUGIN_DIR."/".dirname( plugin_basename( __FILE__ ) ) );
-define("HOLLER_SIGNUP_VERSION", "2.1");
+
 
 /**
  * Class Plugin

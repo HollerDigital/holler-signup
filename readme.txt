@@ -1,6 +1,6 @@
 === Plugin Name ===
 Contributors: (this should be a list of wordpress.org userid's)
-Donate link: https://example.com/
+Donate link: https://hollerdigital.com/
 Tags: tag1, tag2
 Requires at least: 4.7
 Tested up to: 5.4
