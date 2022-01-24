@@ -3,7 +3,7 @@
  * Plugin Name: Holler Signup
  * Description: This plugin adds the ability to add a signup from to your site :)
  * Plugin URI: http://hollerdigital.com/
- * Version: 2.1
+ * Version: 2.11
  * Author: Holler Digital
  * Author URI: http://hollerdigital.com/
  * Text Domain: holler
@@ -15,21 +15,23 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 define('HOLLER_SIGNUP_URL', WP_PLUGIN_URL."/".dirname( plugin_basename( __FILE__ ) ) );
 define('HOLLER_SIGNUP_PATH', WP_PLUGIN_DIR."/".dirname( plugin_basename( __FILE__ ) ) );
-define("HOLLER_SIGNUP_VERSION", "2.1");
+define("HOLLER_SIGNUP_VERSION", "2.11");
 
 // Plugin Updater
-require 'plugin-update-checker/plugin-update-checker.php';
+equire 'plugin-update-checker/plugin-update-checker.php';
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
 	'https://github.com/HollerDigital/holler-signup',
 	__FILE__,
-	'unique-plugin-or-theme-slug'
+	'holler-signup'
 );
-
+ 
 //Set the branch that contains the stable release.
-$myUpdateChecker->setBranch('stable-branch-name');
-
+$myUpdateChecker->setBranch('master');
+// $myUpdateChecker->setAuthentication('your-token-here');
+$myUpdateChecker->getVcsApi()->enableReleaseAssets();
 //Optional: If you're using a private repository, specify the access token like this:
-$myUpdateChecker->setAuthentication('your-token-here');
+//$myUpdateChecker->setAuthentication('your-token-here');
+
 
 // Define Globals
 
