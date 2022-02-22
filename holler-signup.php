@@ -3,7 +3,7 @@
  * Plugin Name: Holler Signup
  * Description: This plugin adds the ability to add a signup from to your site :)
  * Plugin URI: http://hollerdigital.com/
- * Version: 2.11
+ * Version: 2.12
  * Author: Holler Digital
  * Author URI: http://hollerdigital.com/
  * Text Domain: holler
